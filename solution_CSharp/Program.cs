@@ -25,6 +25,7 @@ string[] InputData()
     return input;
 }
 
+// ввод числового фильтра
 int InputFilter()
 {
     bool check = false;

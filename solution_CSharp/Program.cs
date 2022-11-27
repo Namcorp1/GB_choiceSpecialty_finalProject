@@ -24,3 +24,26 @@ string[] InputData()
     Array.Resize(ref input, input.Length - 1);
     return input;
 }
+
+// обработка введенных данных
+string[] ProcessingData(string[] data)
+{
+    string[] newStringArray = new string[0];
+    for (int i = 0; i < data.Length; i++)
+    {
+        if (data[i].Length <= 3)
+        {
+            Array.Resize(ref newStringArray, newStringArray.Length + 1);
+            newStringArray[newStringArray.Length - 1] = data[i];
+        }
+    }
+    return newStringArray;
+}
+
+//вывод результата
+void PrintResult(string[] before, string[] after)
+{
+    Console.WriteLine("Итоги фильтрации:");
+    Console.WriteLine($"Массив ДО - {string.Join(',',before)}");
+    Console.WriteLine($"Массив ПОСЛЕ - {string.Join(',',after)}");
+}

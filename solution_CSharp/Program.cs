@@ -25,13 +25,27 @@ string[] InputData()
     return input;
 }
 
+int InputFilter()
+{
+    bool check = false;
+    int num = -1;
+    while(!check)
+    {
+        
+        Console.Write("Введите кол-во символов для фильтрации: ");
+        string input = Console.ReadLine();
+        int.TryParse(input,out num);
+    }
+    return num;
+}
+
 // обработка введенных данных
-string[] ProcessingData(string[] data)
+string[] ProcessingData(string[] data, int filterCount)
 {
     string[] newStringArray = new string[0];
     for (int i = 0; i < data.Length; i++)
     {
-        if (data[i].Length <= 3)
+        if (data[i].Length <= filterCount)
         {
             Array.Resize(ref newStringArray, newStringArray.Length + 1);
             newStringArray[newStringArray.Length - 1] = data[i];

@@ -40,7 +40,10 @@ string[] ProcessingData(string[] data)
     return newStringArray;
 }
 
-string[] before = InputData();
-string[] after = ProcessingData(before);
-Console.WriteLine(string.Join(',', before));
-Console.WriteLine(string.Join(',', after));
+//вывод результата
+void PrintResult(string[] before, string[] after)
+{
+    Console.WriteLine("Итоги фильтрации:");
+    Console.WriteLine($"Массив ДО - {string.Join(',',before)}");
+    Console.WriteLine($"Массив ПОСЛЕ - {string.Join(',',after)}");
+}

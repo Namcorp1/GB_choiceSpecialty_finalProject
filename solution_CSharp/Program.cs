@@ -34,7 +34,7 @@ int InputFilter()
         
         Console.Write("Введите кол-во символов для фильтрации: ");
         string input = Console.ReadLine();
-        int.TryParse(input,out num);
+        check = int.TryParse(input,out num);
     }
     return num;
 }

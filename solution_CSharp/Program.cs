@@ -40,10 +40,15 @@ string[] ProcessingData(string[] data)
     return newStringArray;
 }
 
-//вывод результата
+// вывод результата
 void PrintResult(string[] before, string[] after)
 {
     Console.WriteLine("Итоги фильтрации:");
-    Console.WriteLine($"Массив ДО - {string.Join(',',before)}");
-    Console.WriteLine($"Массив ПОСЛЕ - {string.Join(',',after)}");
+    Console.WriteLine($"Массив ДО - {string.Join(',', before)}");
+    Console.WriteLine($"Массив ПОСЛЕ - {string.Join(',', after)}");
 }
+
+// клиентский код
+string[] initialArray = InputData();
+string[] processedArray = ProcessingData(initialArray);
+PrintResult(initialArray, processedArray);

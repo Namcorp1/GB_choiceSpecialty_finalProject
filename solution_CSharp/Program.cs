@@ -61,3 +61,9 @@ void PrintResult(string[] before, string[] after)
     Console.WriteLine($"Массив ДО - {string.Join(',',before)}");
     Console.WriteLine($"Массив ПОСЛЕ - {string.Join(',',after)}");
 }
+
+// клиентский код
+string[] initialArray = InputData();
+int count = InputFilter();
+string[] processedArray = ProcessingData(initialArray, count);
+PrintResult(initialArray, processedArray);

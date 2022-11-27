@@ -11,7 +11,7 @@ string[] InputData()
     int index = 0;
     while (check != "exit input")
     {
-        Console.Write("Введите строку: ");
+        Console.Write("Введите строку, после того как закончите, введите 'exit input': ");
         check = Console.ReadLine();
         if (check == "exit input") break;
         else
